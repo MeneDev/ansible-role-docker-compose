@@ -1,0 +1,7 @@
+---
+- name: Install docker-compose
+  get_url:
+    url: https://github.com/docker/compose/releases/download/{{ docker_compose_latest if docker_compose_version == "latest" else docker_compose_version }}/docker-compose-Linux-x86_64
+    checksum: "{{ docker_compose_checksum }}"
+    dest: /usr/local/bin/docker-compose
+    mode: 0555
