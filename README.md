@@ -1,22 +1,22 @@
-Role Name
+menedev.docker-compose
 =========
 
-A brief description of the role goes here.
+Installs binary distribution of docker-compose from GitHub releases. 
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Docker is required and not installed by this role.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+docker_compose_version: "latest" or version string (i.e. "1.17.0-rc1")
 
-Dependencies
-------------
-
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+(other)
+docker_compose_checksum: checksum of the binary, is set automatically
+docker_compose_latest: contains latest docker-compose version string
+docker_compose_checksums: contains the checksums of all binary docker-compose releases. First key is OS, second version.
 
 Example Playbook
 ----------------
@@ -25,14 +25,14 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: menedev.docker-compose, docker_compose_version: "1.17.0-rc1" }
 
 License
 -------
 
-BSD
+CC-BY
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+You can contact/follow me at https://twitter.com/MeneDev
