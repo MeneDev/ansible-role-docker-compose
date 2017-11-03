@@ -1,0 +1,41 @@
+---
+sudo: required
+dist: trusty
+
+language: python
+python: "2.7"
+
+# Doc: https://docs.travis-ci.com/user/customizing-the-build#Build-Matrix
+env:
+  - ANSIBLE_VERSION=latest DOCKER_COMPOSE_VERSION=1.17.0
+  - ANSIBLE_VERSION=latest DOCKER_COMPOSE_VERSION=1.14.0
+  - ANSIBLE_VERSION=latest DOCKER_COMPOSE_VERSION=1.8.1
+  - ANSIBLE_VERSION=2.2.2.0 DOCKER_COMPOSE_VERSION=1.17.0
+  - ANSIBLE_VERSION=2.2.2.0 DOCKER_COMPOSE_VERSION=1.14.0
+  - ANSIBLE_VERSION=2.2.2.0 DOCKER_COMPOSE_VERSION=1.8.1
+branches:
+  only:
+    - master
+
+before_install:
+  - sudo apt-get update -qq
+
+install:
+  # Install Ansible.
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
+
+script:
+
+  - "printf '[defaults]\nroles_path = ../' > ansible.cfg"
+  # Check the role/playbook's syntax.
+  - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
+
+  # Run the role/playbook with ansible-playbook.
+  - ansible-playbook -i tests/inventory tests/test.yml -vvvv --connection=local --skip-tags update,copy_host_ssh_id
+
+  # check is the user is created or not
+  - docker-compose version | grep "docker-compose version" | grep "1.17.0"
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

@@ -1,5 +1,4 @@
 ---
 - hosts: localhost
-  remote_user: root
   roles:
-    - menedev.docker-compose
+    - { role: ansible-role-docker-compose, become: true, docker_compose_version: "{{ lookup('env','DOCKER_COMPOSE_VERSION') }}" }
