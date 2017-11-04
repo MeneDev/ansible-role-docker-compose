@@ -1,7 +1,8 @@
 menedev.docker-compose
 =========
 
-Installs binary distribution of docker-compose from GitHub releases. 
+Installs binary distribution of docker-compose from GitHub releases.
+[![Build Status](https://travis-ci.org/MeneDev/ansible-role-docker-compose.svg?branch=master)](https://travis-ci.org/MeneDev/ansible-role-docker-compose)
 
 Requirements
 ------------

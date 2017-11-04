@@ -1,2 +1,6 @@
+---
 docker_compose_version: latest
 docker_compose_checksum: "{{ docker_compose_checksums[ansible_system][docker_compose_version] }}"
+
+# empty is the default path for your os
+docker_compose_path: ""

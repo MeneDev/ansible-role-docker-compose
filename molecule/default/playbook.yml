@@ -1,0 +1,5 @@
+---
+- name: Converge
+  hosts: all
+  roles:
+    - { role: menedev.docker-compose, become: true, docker_compose_version: "{{ lookup('env','DOCKER_COMPOSE_VERSION') }}" }
