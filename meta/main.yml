@@ -12,6 +12,18 @@ galaxy_info:
         - name: GenericLinux
           versions:
               - all
+        - name: Alpine
+          versions:
+              - all
+        - name: ArchLinux
+          versions:
+              - all
+        - name: Debian
+          versions:
+              - all
+        - name: Fedora
+          versions:
+              - all
 
     galaxy_tags: [docker]
 

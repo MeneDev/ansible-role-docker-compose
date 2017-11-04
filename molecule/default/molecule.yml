@@ -18,18 +18,18 @@ platforms:
     image: debian:8
   - name: debian9
     image: debian:9
-  - name: centos5
-    image: centos:5
   - name: centos6
     image: centos:6
   - name: centos7
     image: centos:7
   - name: fedora20
     image: fedora:20
-  - name: fedora21
-    image: fedora:21
-  - name: fedora22
-    image: fedora:22
+  # breaks
+  # - name: fedora21
+  #   image: fedora:21
+  # breaks
+  # - name: fedora22
+  #   image: fedora:22
   - name: fedora23
     image: fedora:23
   - name: fedora24
