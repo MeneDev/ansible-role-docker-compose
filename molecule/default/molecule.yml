@@ -6,36 +6,36 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: ubuntu1404
-    image: ubuntu:14.04
-  - name: ubuntu1404
+  # - name: ubuntu1404
+  #   image: ubuntu:14.04
+  - name: ubuntu1604
     image: ubuntu:16.04
-  - name: ubuntu1710
-    image: ubuntu:17.10
-  - name: debian7
-    image: debian:7
-  - name: debian8
-    image: debian:8
-  - name: debian9
-    image: debian:9
-  - name: centos6
-    image: centos:6
-  - name: centos7
-    image: centos:7
-  - name: fedora20
-    image: fedora:20
+  # - name: ubuntu1710
+  #   image: ubuntu:17.10
+  # - name: debian7
+  #   image: debian:7
+  # - name: debian8
+  #   image: debian:8
+  # - name: debian9
+  #   image: debian:9
+  # - name: centos6
+  #   image: centos:6
+  # - name: centos7
+  #   image: centos:7
+  # - name: fedora20
+  #   image: fedora:20
   # breaks
   # - name: fedora21
   #   image: fedora:21
   # breaks
   # - name: fedora22
   #   image: fedora:22
-  - name: fedora23
-    image: fedora:23
-  - name: fedora24
-    image: fedora:24
-  - name: fedora25
-    image: fedora:25
+  # - name: fedora23
+  #   image: fedora:23
+  # - name: fedora24
+  #   image: fedora:24
+  # - name: fedora25
+  #   image: fedora:25
   - name: fedora26
     image: fedora:26
 provisioner:

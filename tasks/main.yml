@@ -3,11 +3,11 @@
   include_vars: "{{ item }}"
   with_first_found:
     - "vars/{{ ansible_distribution }}.yml"
-    - "vars/Linux.yml"
+    - "vars/{{ ansible_system }}.yml"
 
 - name: Install docker-compose
   get_url:
-    url: https://github.com/docker/compose/releases/download/{{ docker_compose_latest if docker_compose_version == "latest" else docker_compose_version }}/docker-compose-Linux-x86_64
+    url: "{{ docker_compose_url }}"
     checksum: "{{ docker_compose_checksum }}"
-    dest: "{{ docker_compose_path_os_default }}"
+    dest: "{{ docker_compose_path | default(docker_compose_path_os_default) }}"
     mode: 0555
