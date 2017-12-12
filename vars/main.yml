@@ -2,13 +2,17 @@
 docker_compose:
   "Linux":
     "edge":
-      "url": "https://github.com/docker/compose/releases/download/1.18.0-rc1/docker-compose-Linux-x86_64"
-      "checksum": "sha256:08e11bae2565bf7f52c2f84a984683f64b60349e9a7e3b396dfe21acd38efc2e"
-      "version": "1.18.0-rc1"
+      "url": "https://github.com/docker/compose/releases/download/1.18.0-rc2/docker-compose-Linux-x86_64"
+      "checksum": "sha256:d0e1ba02c67d83c7d1126eed4573d8b0063b9c07cdcea513092e6236ac2119c4"
+      "version": "1.18.0-rc2"
     "latest":
       "url": "https://github.com/docker/compose/releases/download/1.17.1/docker-compose-Linux-x86_64"
       "checksum": "sha256:db0a7b79d195dc021461d5628a8d53eeb2e556d2548b764770fccabb0a319dd8"
       "version": "1.17.1"
+    "1.18.0-rc2":
+      "url": "https://github.com/docker/compose/releases/download/1.18.0-rc2/docker-compose-Linux-x86_64"
+      "checksum": "sha256:d0e1ba02c67d83c7d1126eed4573d8b0063b9c07cdcea513092e6236ac2119c4"
+      "version": "1.18.0-rc2"
     "1.18.0-rc1":
       "url": "https://github.com/docker/compose/releases/download/1.18.0-rc1/docker-compose-Linux-x86_64"
       "checksum": "sha256:08e11bae2565bf7f52c2f84a984683f64b60349e9a7e3b396dfe21acd38efc2e"
@@ -125,19 +129,19 @@ docker_compose:
       "url": "https://github.com/docker/compose/releases/download/1.9.0-rc3/docker-compose-Linux-x86_64"
       "checksum": "sha256:1e64be26c66c84ae12951fe9503e239c4a35e2221f6c5d9d779ca668aa70c758"
       "version": "1.9.0-rc3"
-    "1.9.0-rc2":
-      "url": "https://github.com/docker/compose/releases/download/1.9.0-rc2/docker-compose-Linux-x86_64"
-      "checksum": "sha256:6bb12af4018fbd7b6938f19c3eecb2ee7ede5d05e1d33cba9700a359ef25e59c"
-      "version": "1.9.0-rc2"
   "Darwin":
     "edge":
-      "url": "https://github.com/docker/compose/releases/download/1.18.0-rc1/docker-compose-Darwin-x86_64"
-      "checksum": "sha256:e942bb42e6afa98b8045d4e43c7dfeb5c9b5a044070c9c43811a994f1a4a253c"
-      "version": "1.18.0-rc1"
+      "url": "https://github.com/docker/compose/releases/download/1.18.0-rc2/docker-compose-Darwin-x86_64"
+      "checksum": "sha256:75524159716f6f3bb497bffa8dfabc0434a05791464b5a152e1f91df228fb42a"
+      "version": "1.18.0-rc2"
     "latest":
       "url": "https://github.com/docker/compose/releases/download/1.17.1/docker-compose-Darwin-x86_64"
       "checksum": "sha256:63de322e15539cf30d632758fc5339b60f32eb937ec17b4595a6a34b9d84484a"
       "version": "1.17.1"
+    "1.18.0-rc2":
+      "url": "https://github.com/docker/compose/releases/download/1.18.0-rc2/docker-compose-Darwin-x86_64"
+      "checksum": "sha256:75524159716f6f3bb497bffa8dfabc0434a05791464b5a152e1f91df228fb42a"
+      "version": "1.18.0-rc2"
     "1.18.0-rc1":
       "url": "https://github.com/docker/compose/releases/download/1.18.0-rc1/docker-compose-Darwin-x86_64"
       "checksum": "sha256:e942bb42e6afa98b8045d4e43c7dfeb5c9b5a044070c9c43811a994f1a4a253c"
@@ -254,19 +258,19 @@ docker_compose:
       "url": "https://github.com/docker/compose/releases/download/1.9.0-rc3/docker-compose-Darwin-x86_64"
       "checksum": "sha256:b8816d6e6f8581119bf89b61c0131bb52d4608368cae58a043ca4d415a89228b"
       "version": "1.9.0-rc3"
-    "1.9.0-rc2":
-      "url": "https://github.com/docker/compose/releases/download/1.9.0-rc2/docker-compose-Darwin-x86_64"
-      "checksum": "sha256:8228d1afe676a9b1f6fa656834a1d8f1c392bdae54b036eff9475e8c1dd59d7f"
-      "version": "1.9.0-rc2"
   "Windows":
     "edge":
-      "url": "https://github.com/docker/compose/releases/download/1.18.0-rc1/docker-compose-Windows-x86_64.exe"
-      "checksum": "sha256:5144111a922e0586fa7bd83fe8df84156d41ecad15599b7045f4371f1b338743"
-      "version": "1.18.0-rc1"
+      "url": "https://github.com/docker/compose/releases/download/1.18.0-rc2/docker-compose-Windows-x86_64.exe"
+      "checksum": "sha256:1ffd46e90b39f27e256496b5f7128487099ed026784dc0777ec1bd60d7ac21e4"
+      "version": "1.18.0-rc2"
     "latest":
       "url": "https://github.com/docker/compose/releases/download/1.17.1/docker-compose-Windows-x86_64.exe"
       "checksum": "sha256:86a9e5193628e93ab73fd0b7438e954f25ae68da45ab3b6ab10dda3f307bb21c"
       "version": "1.17.1"
+    "1.18.0-rc2":
+      "url": "https://github.com/docker/compose/releases/download/1.18.0-rc2/docker-compose-Windows-x86_64.exe"
+      "checksum": "sha256:1ffd46e90b39f27e256496b5f7128487099ed026784dc0777ec1bd60d7ac21e4"
+      "version": "1.18.0-rc2"
     "1.18.0-rc1":
       "url": "https://github.com/docker/compose/releases/download/1.18.0-rc1/docker-compose-Windows-x86_64.exe"
       "checksum": "sha256:5144111a922e0586fa7bd83fe8df84156d41ecad15599b7045f4371f1b338743"
@@ -383,7 +387,3 @@ docker_compose:
       "url": "https://github.com/docker/compose/releases/download/1.9.0-rc3/docker-compose-Windows-x86_64.exe"
       "checksum": "sha256:91198d4b8aa2c6fc818e04c8ca3b2379cb3ff1df9fbb2aa6110b8568e96f1847"
       "version": "1.9.0-rc3"
-    "1.9.0-rc2":
-      "url": "https://github.com/docker/compose/releases/download/1.9.0-rc2/docker-compose-Windows-x86_64.exe"
-      "checksum": "sha256:8c9ce294dd833268e234842e9deac088a3015e8d23d4e4893fbf2a0dab982df9"
-      "version": "1.9.0-rc2"
