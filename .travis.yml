@@ -5,36 +5,40 @@ dist: trusty
 language: python
 python: "2.7"
 services:
-  - docker
+- docker
 
 # Doc: https://docs.travis-ci.com/user/customizing-the-build#Build-Matrix
 env:
-  - PROJECT_VERSION=edge ANSIBLE_VERSION=2.2.0 EXPECT=1.18.0-rc1
-  - PROJECT_VERSION=latest ANSIBLE_VERSION=2.2.0 EXPECT=1.17.1
-  - PROJECT_VERSION=1.18.0-rc1 ANSIBLE_VERSION=2.2.0 EXPECT=1.18.0-rc1
-  - PROJECT_VERSION=1.17.1 ANSIBLE_VERSION=2.2.0 EXPECT=1.17.1
+- PROJECT_VERSION=Windows ANSIBLE_VERSION=2.4.2.0
+- PROJECT_VERSION=Darwin ANSIBLE_VERSION=2.4.2.0
+- PROJECT_VERSION=Linux ANSIBLE_VERSION=2.4.2.0
+- PROJECT_VERSION=Windows ANSIBLE_VERSION=2.2.0
 
+- PROJECT_VERSION=Darwin ANSIBLE_VERSION=2.2.0
+- PROJECT_VERSION=Linux ANSIBLE_VERSION=2.2.0
 branches:
   only:
-    - master
+  - master
 
 before_install:
-  - sudo apt-get update -qq
+- sudo apt-get update -qq
 
 install:
   # Install Ansible.
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
-  - pip install molecule
-  - pip install docker-py
+- if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install
+  ansible==$ANSIBLE_VERSION; fi
+- if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible-lint; fi
+- pip install molecule
+- pip install docker-py
 
 before_script:
-  - mv $TRAVIS_BUILD_DIR ../menedev.docker-compose
-  - cd ../menedev.docker-compose
-  - export TRAVIS_BUILD_DIR=`pwd`
+- mv $TRAVIS_BUILD_DIR ../menedev.docker-compose
+- cd ../menedev.docker-compose
+- export TRAVIS_BUILD_DIR=`pwd`
 
 script:
-  - DOCKER_COMPOSE_VERSION=$PROJECT_VERSION DOCKER_COMPOSE_VERSION_EXPECT=$EXPECT molecule --debug test
+- DOCKER_COMPOSE_VERSION=$PROJECT_VERSION DOCKER_COMPOSE_VERSION_EXPECT=$EXPECT molecule
+  --debug test
   # - "printf '[defaults]\nroles_path = ../' > ansible.cfg"
   # # Check the role/playbook's syntax.
   # - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
