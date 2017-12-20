@@ -16,9 +16,9 @@ env:
 
 - PROJECT_VERSION=Darwin ANSIBLE_VERSION=2.2.0
 - PROJECT_VERSION=Linux ANSIBLE_VERSION=2.2.0
-branches:
-  only:
-  - master
+#branches:
+#  only:
+#  - master
 
 before_install:
 - sudo apt-get update -qq
